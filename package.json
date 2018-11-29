@@ -1,0 +1,27 @@
+{
+  "name": "strikethrough-js",
+  "version": "1.0.0",
+  "description": "Manipulate strikethrough chars in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntltd/strikethrough-js.git"
+  },
+  "keywords": [
+    "strikethrough",
+    "string",
+    "char"
+  ],
+  "author": "ntltd",
+  "bugs": {
+    "url": "https://github.com/ntltd/strikethrough-js/issues"
+  },
+  "homepage": "https://github.com/ntltd/strikethrough-js#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
