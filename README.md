@@ -14,6 +14,19 @@ npm i strikethrough-js
 ```
 
 ## Usage
+```javascript
+var lib = require('strikethrough-js');
+
+// or
+
+import {
+    removeStrikethrough,
+    removeStrikethroughChars,
+    getStrikethroughChars,
+    getRemoveStrikethroughChars
+} from 'strikethrough-js';
+```
+
 ### Remove strikethrough
 ```javascript
 var str = removeStrikethrough('1̶2̶3̶7̶8̶9̶€̶');
