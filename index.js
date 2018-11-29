@@ -15,27 +15,41 @@ var regexStrikethrough = /[̵̶]/g;
  * @param {String} str - The string
  * @returns {String} The modified string
  */
-module.exports = function removeStrikethroughChars(str) {
+function removeStrikethroughChars(str) {
     if (str && typeof str === 'string') return str.replace(regexStrikethroughChars, '');
     return str
-};
+}
 
 /**
  * Remove strikethrough (short and long) of a string
  * @param {String} str - The string
  * @returns {String} The modified string
  */
-module.exports = function removeStrikethrough(str) {
+function removeStrikethrough(str) {
     if (str && typeof str === 'string') return str.replace(regexStrikethrough, '');
     return str
-};
+}
 
 /**
  * Get strikethrough chars of a string
  * @param {String} str - The string
  * @returns {Array} The price
  */
-module.exports = function getStrikethroughChars(str) {
-    if (str && typeof str === 'string') return str.match(regexStrikethroughChars);
+function getStrikethroughChars(str) {
+    if (str && typeof str === 'string') {
+        var result = str.match(regexStrikethroughChars);
+        return result ? result : [];
+    }
     return []
+}
+
+/**
+ * Exports modules
+ * @type {{removeStrikethroughChars: removeStrikethroughChars, removeStrikethrough: removeStrikethrough, getStrikethroughChars: getStrikethroughChars}}
+ */
+module.exports = {
+    removeStrikethroughChars,
+    removeStrikethrough,
+    getStrikethroughChars
 };
+
