@@ -1,2 +1,2 @@
 # strikethrough-js
-Manipulate strikethrough chars in string
+Manipulate strikethrough chars in Javascript
