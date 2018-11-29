@@ -44,12 +44,28 @@ function getStrikethroughChars(str) {
 }
 
 /**
+ * Get strikethrough chars of a string
+ * @param {String} str - The string
+ * @returns {Array} The price
+ */
+function getRemoveStrikethroughChars(str) {
+    const strikethroughChars = getStrikethroughChars(str);
+    if (strikethroughChars.length > 0) {
+        return strikethroughChars.map(function(char) {
+            return removeStrikethrough(char);
+        });
+    }
+    return []
+}
+
+/**
  * Exports modules
  * @type {{removeStrikethroughChars: removeStrikethroughChars, removeStrikethrough: removeStrikethrough, getStrikethroughChars: getStrikethroughChars}}
  */
 module.exports = {
     removeStrikethroughChars,
     removeStrikethrough,
-    getStrikethroughChars
+    getStrikethroughChars,
+    getRemoveStrikethroughChars
 };
 
