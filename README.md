@@ -5,7 +5,7 @@ Manipulate strikethrough chars in Javascript
 
 ## Install
 ```npm
-npm install @ntltd/strikethrough-js
+npm install strikethrough-js
 ```
 
 ## Usage
