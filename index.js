@@ -44,11 +44,21 @@ function getStrikethroughChars(str) {
 }
 
 /**
- * Get strikethrough chars of a string
+ * Get strikethrough string of a string
+ * @param {String} str - The string
+ * @returns {String} The price
+ */
+function getStrikethroughString(str) {
+    var arr = getStrikethroughChars(str);
+    return arr.join('');
+}
+
+/**
+ * Get chars removing strikethrough of a string
  * @param {String} str - The string
  * @returns {Array} The price
  */
-function getRemoveStrikethroughChars(str) {
+function getChars(str) {
     const strikethroughChars = getStrikethroughChars(str);
     if (strikethroughChars.length > 0) {
         return strikethroughChars.map(function(char) {
@@ -59,13 +69,25 @@ function getRemoveStrikethroughChars(str) {
 }
 
 /**
+ * Get strikethrough string of a string
+ * @param {String} str - The string
+ * @returns {String} The price
+ */
+function getString(str) {
+    var arr = getChars(str);
+    return arr.join('');
+}
+
+/**
  * Exports modules
- * @type {{removeStrikethroughChars: removeStrikethroughChars, removeStrikethrough: removeStrikethrough, getStrikethroughChars: getStrikethroughChars}}
+ * @type {{removeStrikethroughChars: removeStrikethroughChars, removeStrikethrough: removeStrikethrough, getChars: getChars}}
  */
 module.exports = {
     removeStrikethroughChars,
     removeStrikethrough,
     getStrikethroughChars,
-    getRemoveStrikethroughChars
+    getStrikethroughString,
+    getChars,
+    getString
 };
 

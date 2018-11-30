@@ -1,6 +1,6 @@
 {
   "name": "strikethrough-js",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "description": "Manipulate strikethrough chars in Javascript",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/ntltd/strikethrough-js#readme",
   "devDependencies": {
-    "jest": "^23.6.0"
-  }
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "test"
+  ]
 }

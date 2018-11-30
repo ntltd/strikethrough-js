@@ -16,14 +16,10 @@ npm i strikethrough-js
 ## Usage
 ```javascript
 var lib = require('strikethrough-js');
-
+lib.removeStrikethrough(...);
 // or
-
 import {
-    removeStrikethrough,
-    removeStrikethroughChars,
-    getStrikethroughChars,
-    getRemoveStrikethroughChars
+    removeStrikethrough
 } from 'strikethrough-js';
 ```
 
@@ -48,14 +44,29 @@ console.log(str);
 // ["1̶", "2̶", "3̶", "7̶", "8̶", "9̶", "€̶"]
 ```
 
-### Get remove strikethrough chars
+### Get strikethrough string
 ```javascript
-var str = getRemoveStrikethroughChars('456€ (1̶2̶3̶7̶8̶9̶€̶)');
+var str = getStrikethroughString('456€ (1̶2̶3̶7̶8̶9̶€̶)');
+console.log(str);
+// 1̶2̶3̶7̶8̶9̶€̶
+```
+
+### Get chars
+```javascript
+var str = getChars('456€ (1̶2̶3̶7̶8̶9̶€̶)');
 console.log(str);
 // ["1", "2", "3", "7", "8", "9", "€"]
 ```
+
+### Get string
+```javascript
+var str = getChars('456€ (1̶2̶3̶7̶8̶9̶€̶)');
+console.log(str);
+// 123789€
+```
+
 ## Testing
 ```npm
 npm t
 ```
-Will use [Jest](https://jestjs.io/) test suites.
+Will use [Jest](https://jestjs.io/) test suites and [pre-commit](https://pre-commit.com/) hook.
