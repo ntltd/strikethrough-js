@@ -16,11 +16,13 @@ npm i strikethrough-js
 ## Usage
 ```javascript
 var lib = require('strikethrough-js');
-lib.removeStrikethrough(...);
-// or
+var res = lib.removeStrikethrough('...');
+```
+```javascript
 import {
     removeStrikethrough
 } from 'strikethrough-js';
+var res = removeStrikethrough('...');
 ```
 
 ### Remove strikethrough
@@ -60,7 +62,7 @@ console.log(str);
 
 ### Get string
 ```javascript
-var str = getChars('456€ (1̶2̶3̶7̶8̶9̶€̶)');
+var str = getString('456€ (1̶2̶3̶7̶8̶9̶€̶)');
 console.log(str);
 // 123789€
 ```
