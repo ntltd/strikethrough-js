@@ -80,7 +80,14 @@ function getString(str) {
 
 /**
  * Exports modules
- * @type {{removeStrikethroughChars: removeStrikethroughChars, removeStrikethrough: removeStrikethrough, getChars: getChars}}
+ * @type {{
+ *  removeStrikethroughChars: removeStrikethroughChars,
+ *  removeStrikethrough: removeStrikethrough,
+ *  getStrikethroughChars: getStrikethroughChars,
+ *  getStrikethroughString: getStrikethroughString,
+ *  getString: getString,
+ *  getChars: getChars
+ * }}
  */
 module.exports = {
     removeStrikethroughChars,
