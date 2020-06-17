@@ -1,4 +1,18 @@
-import * as regexp from './regular-expressions'
+/* REGULAR EXPRESSIONS */
+
+/**
+ * Strikethrough chars (short and long)
+ * @type {RegExp}
+ */
+const regexStrikethroughChars = /\w̵|\w̶|\W̵|\W̶|̵|̶/g
+
+/**
+ * Strikethrough symbols (short and long)
+ * @type {RegExp}
+ */
+const regexStrikethrough = /[̵̶]/g
+
+/* UTILS */
 
 /**
  * Remove strikethrough chars (short and long) of a string
@@ -7,7 +21,7 @@ import * as regexp from './regular-expressions'
  */
 export const removeStrikethroughChars = (str) => {
   if (str && typeof str === 'string') {
-    return str.replace(regexp.regexStrikethroughChars, '')
+    return str.replace(regexStrikethroughChars, '')
   }
   return str
 }
@@ -19,7 +33,7 @@ export const removeStrikethroughChars = (str) => {
  */
 export const removeStrikethrough = (str) => {
   if (str && typeof str === 'string') {
-    return str.replace(regexp.regexStrikethrough, '')
+    return str.replace(regexStrikethrough, '')
   }
   return str
 }
@@ -31,7 +45,7 @@ export const removeStrikethrough = (str) => {
  */
 export const getStrikethroughChars = (str) => {
   if (str && typeof str === 'string') {
-    return str.match(regexp.regexStrikethroughChars) || []
+    return str.match(regexStrikethroughChars) || []
   }
   return []
 }
