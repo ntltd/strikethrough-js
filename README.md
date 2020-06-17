@@ -8,69 +8,81 @@
 </p>
 
 ## Why?
+This library aims to help you **manipulate strikethrough characters** in strings.
+
+### What is strikethrough text?
 > Strikethrough is represented by words with a horizontal line through their center. It implies that the text is wrong and was recently deleted or marked as such. Unlike the HTML's tag, strikethrough text will work when you copy-paste it in to another location. That’s because the strikethrough characters [...] are in plain text. - [Saijo George](https://saijogeorge.com/strikethrough-text-generator/)
 
-This library allows you to get rid of this because some fonts doesn't support strikethrough. You will be able to apply strikethrough another way (e.g., in CSS: `text-decoration: line-through;`)
+### An example
+It can be useful when some fonts don't support strikethrough text. Using this, you will be able to use "regular" text and then apply strikethrough another way (e.g., in CSS: `text-decoration: line-through;`).
 
-## Install
+## Get started
+### Install
 ```sh
-npm i strikethrough-js
+npm install strikethrough-js
 ```
 
-## Usage
+### Use
 ```javascript
-// Javascript
+// Common
 var lib = require('strikethrough-js');
-var res = lib.removeStrikethrough('...');
+var res = lib.removeStrikethrough('m̶y̶T̶e̶x̶t̶');
 
-// ES5-6
+// ES5/6
 import * as lib from 'strikethrough-js';
-const res = lib.removeStrikethrough('...');
+const res = lib.removeStrikethrough('m̶y̶T̶e̶x̶t̶');
 ```
 
-### Remove strikethrough
+## Utils
+### `removeStrikethrough`
+Remove the strikethrough characters from your string and replace them by regular ones:
 ```javascript
 const str = removeStrikethrough('1̶2̶3̶7̶8̶9̶€̶');
 console.log(str);
 // 123789€
 ```
 
-### Remove strikethrough chars
+### `removeStrikethroughChars`
+Remove the strikethrough characters from your string:
 ```javascript
 const str = removeStrikethroughChars('456€ 1̶2̶3̶7̶8̶9̶€̶');
 console.log(str);
 // 456€ 
 ```
 
-### Get strikethrough chars
+### `getStrikethroughChars`
+Get a list of the strikethrough characters in your string:
 ```javascript
 const str = getStrikethroughChars('456€ (1̶2̶3̶7̶8̶9̶€̶)');
 console.log(str);
 // ["1̶", "2̶", "3̶", "7̶", "8̶", "9̶", "€̶"]
 ```
 
-### Get strikethrough string
+### `getStrikethroughString`
+Get the strikethrough characters in your string:
 ```javascript
 const str = getStrikethroughString('456€ (1̶2̶3̶7̶8̶9̶€̶)');
 console.log(str);
 // 1̶2̶3̶7̶8̶9̶€̶
 ```
 
-### Get chars
+### `getChars`
+Get a list of the strikethrough characters of your string, but regular ones:
 ```javascript
 const str = getChars('456€ (1̶2̶3̶7̶8̶9̶€̶)');
 console.log(str);
 // ["1", "2", "3", "7", "8", "9", "€"]
 ```
 
-### Get string
+### `getChars`
+Get the strikethrough characters of your string, but regular ones:
 ```javascript
 const str = getString('456€ (1̶2̶3̶7̶8̶9̶€̶)');
 console.log(str);
 // 123789€
 ```
 
-## Develop
+## Contribute
 ### Library
 Since this `lib` is pretty light, there is no need for a sophisticated bundler (like Webpack or Rollup). The core `lib` is bundled with bare bones [NodeJS](https://nodejs.org/en/) and [Babel](https://babeljs.io/).
  
@@ -78,4 +90,4 @@ Since this `lib` is pretty light, there is no need for a sophisticated bundler (
 ```npm
 npm t
 ```
-Will use [Jest](https://jestjs.io/) test suites and [pre-commit](https://pre-commit.com/) hook.
+Will run [Jest](https://jestjs.io/) test suites. It will be also triggered by [Husky](https://github.com/typicode/husky) git hooks.
