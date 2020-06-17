@@ -1,6 +1,6 @@
 {
   "name": "strikethrough-js",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Manipulate strikethrough characters in Javascript",
   "main": "lib/index.js",
   "scripts": {
