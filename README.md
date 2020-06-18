@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://i.imgur.com/5260wcO.gif" width="400" alt="strikethrough-js" />
+    <img src="https://i.imgur.com/5260wcO.gif" width="100%" alt="strikethrough-js" />
 </div>
 <br />
 <p align="center">Manipulate plain text strikethrough chars in Javascript</p>
