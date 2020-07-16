@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/ntltd/strikethrough-js#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/node": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "husky": "^4.2.5",
-    "jest": "^26.0.1"
+    "jest": "^26.1.0"
   },
   "husky": {
     "hooks": {
