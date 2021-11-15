@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib --ignore src/test",
-    "prepare": "rm -rf lib && npm run build",
+    "prepare": "husky install && rm -rf lib && npm run build",
     "test": "jest"
   },
   "license": "MIT",
@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/ntltd/strikethrough-js#readme",
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.5",
-    "husky": "^4.3.0",
-    "jest": "^26.4.2"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1"
   },
   "husky": {
     "hooks": {
