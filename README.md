@@ -25,12 +25,12 @@ npm install strikethrough-js
 ### Use
 ```javascript
 // Common
-var lib = require('strikethrough-js');
-var res = lib.removeStrikethrough('m̶y̶T̶e̶x̶t̶');
+var strikethrough = require('strikethrough-js');
+var res = strikethrough.removeStrikethrough('m̶y̶T̶e̶x̶t̶');
 
 // ES5/6
-import * as lib from 'strikethrough-js';
-const res = lib.removeStrikethrough('m̶y̶T̶e̶x̶t̶');
+import { removeStrikethrough } from 'strikethrough-js';
+const res = removeStrikethrough('m̶y̶T̶e̶x̶t̶');
 ```
 
 ## Utils
@@ -84,10 +84,10 @@ console.log(str);
 
 ## Contribute
 ### Library
-Since this `lib` is pretty light, there is no need for a sophisticated bundler (like Webpack or Rollup). The core `lib` is bundled with bare bones [NodeJS](https://nodejs.org/en/) and [Babel](https://babeljs.io/).
+Since this `lib` is pretty light, there is no need for a sophisticated bundler (like Webpack or Rollup). The core `lib` is bundled with bare-bones [NodeJS](https://nodejs.org/en/) and [Babel](https://babeljs.io/).
  
 ### Tests
 ```npm
-npm t
+npm test
 ```
 Will run [Jest](https://jestjs.io/) test suites. It will be also triggered by [Husky](https://github.com/typicode/husky) git hooks.
